@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Place to Eat</title>
+    <meta name="description" content="Learn about The Place to Eat - Boston's favorite 70s American style restaurant.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">The Place to Eat</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Our Story</h2>
+        <p>A journey back to the golden era of American dining.</p>
+    </section>
+
+    <section style="background-color: #F5EFE6;">
+        <h2>Who We Are</h2>
+        <p>The Place to Eat was founded with one simple mission: to bring back the authentic flavors and warm atmosphere of 1970s American diners. Every dish we serve is inspired by the classic recipes that made American food iconic.</p>
+        <br><br>
+        <p>Located in the heart of Boston, MA, we pride ourselves on using fresh, quality ingredients to create meals that feel like home. Whether you're craving a hearty breakfast, a juicy burger, or a classic sandwich, we've got you covered.</p>
+    </section>
+
+    <section>
+        <h2>Our Values</h2>
+        <div class="menu-grid">
+            <div class="menu-item" style="text-align:center; border-left:4px solid #8B2500;">
+                <h3>🍔 Quality Food</h3>
+                <p>We use only the freshest ingredients to ensure every meal is perfect.</p>
+            </div>
+            <div class="menu-item" style="text-align:center; border-left:4px solid #8B2500;">
+                <h3>🚀 Fast Delivery</h3>
+                <p>Hot food delivered to your door in 20-40 minutes, guaranteed.</p>
+            </div>
+            <div class="menu-item" style="text-align:center; border-left:4px solid #8B2500;">
+                <h3>❤️ Made with Love</h3>
+                <p>Every dish is prepared with passion and dedication to great taste.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>The Place to Eat</span> | 48 Road Boston, MA, USA | 📞 01233322211</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

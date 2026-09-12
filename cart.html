@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - The Place to Eat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">The Place to Eat</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+    </nav>
+
+    <section>
+        <h2>Your Cart</h2>
+
+        <div class="cart-container">
+            <div id="cart-items"></div>
+
+            <div id="cart-summary" style="display:none;">
+                <div class="cart-summary">
+                    <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                    <p>Delivery Fee: <span>$5.00</span></p>
+                    <p class="total">Total: <span id="total">$0.00</span></p>
+                </div>
+                <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                    Proceed to Checkout →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>The Place to Eat</span> | 48 Road Boston, MA, USA | 📞 01233322211</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

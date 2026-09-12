@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Place to Eat</title>
+    <meta name="description" content="Contact The Place to Eat - Boston's favorite 70s American style restaurant.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">The Place to Eat</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you!</p>
+    </section>
+
+    <section style="background-color: #F5EFE6;">
+        <h2>Find Us</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>📍 Address</h3>
+                <p>48 Road Boston<br>MA, USA</p>
+            </div>
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p>01233322211</p>
+            </div>
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p>theplacetoeat@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>🕐 Hours</h3>
+                <p>Every Day<br>8:00 AM - 7:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Delivery Info</h2>
+        <div class="menu-grid">
+            <div class="menu-item" style="text-align:center; border-left:4px solid #8B2500;">
+                <h3>🚀 Delivery Time</h3>
+                <p>20 - 40 minutes</p>
+            </div>
+            <div class="menu-item" style="text-align:center; border-left:4px solid #8B2500;">
+                <h3>💰 Delivery Fee</h3>
+                <p>$5.00 flat rate</p>
+            </div>
+            <div class="menu-item" style="text-align:center; border-left:4px solid #8B2500;">
+                <h3>🛒 Minimum Order</h3>
+                <p>No minimum order!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>The Place to Eat</span> | 48 Road Boston, MA, USA | 📞 01233322211</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

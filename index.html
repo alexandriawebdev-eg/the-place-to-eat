@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Place to Eat - Boston, MA</title>
+    <meta name="description" content="The Place to Eat - Authentic 70s American style restaurant in Boston, MA. Order online for delivery!">
+    <meta name="keywords" content="restaurant, Boston, American food, breakfast, lunch, delivery, sandwiches">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">The Place to Eat</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+    </nav>
+
+    <div class="hero">
+        <h1>The Place to Eat</h1>
+        <p>Authentic 70s American Diner Experience</p>
+        <button onclick="window.location.href='menu.html'">Order Now</button>
+    </div>
+
+    <section>
+        <h2>Welcome to The Place to Eat</h2>
+        <p>Step back in time and enjoy the classic flavors of 1970s America. From hearty breakfasts to juicy burgers and classic sandwiches, every bite takes you on a journey through the golden era of American dining.</p>
+    </section>
+
+    <section style="background-color: #F5EFE6;">
+        <h2>Why Choose Us?</h2>
+        <div class="menu-grid">
+            <div class="menu-item" style="text-align:center; border-left: 4px solid #8B2500;">
+                <h3>🚀 Fast Delivery</h3>
+                <p>Hot food delivered to your door in 20-40 minutes.</p>
+            </div>
+            <div class="menu-item" style="text-align:center; border-left: 4px solid #8B2500;">
+                <h3>🍔 Classic Recipes</h3>
+                <p>Authentic 70s American recipes made with love.</p>
+            </div>
+            <div class="menu-item" style="text-align:center; border-left: 4px solid #8B2500;">
+                <h3>💰 No Minimum Order</h3>
+                <p>Order as little or as much as you want.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Opening Hours</h2>
+        <p>Every Day: 8:00 AM - 7:00 PM</p>
+        <p style="margin-top:10px;">📍 48 Road Boston, MA, USA</p>
+        <p style="margin-top:5px;">📞 01233322211</p>
+        <br>
+        <button onclick="window.location.href='menu.html'" style="padding:15px 40px; background-color:#8B2500; color:#FFF8DC; border:none; border-radius:5px; font-size:18px; cursor:pointer;">
+            View Menu & Order
+        </button>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>The Place to Eat</span> | 48 Road Boston, MA, USA | 📞 01233322211</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

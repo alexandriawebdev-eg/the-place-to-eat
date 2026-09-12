@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - The Place to Eat</title>
+    <meta name="description" content="Explore our 70s American style menu featuring breakfast, lunch and sandwiches.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">The Place to Eat</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+    </nav>
+
+    <section>
+        <h2>Our Menu</h2>
+        <p>Classic 70s American favorites made fresh daily.</p>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <div class="category-tab active" onclick="filterMenu('all')">All</div>
+            <div class="category-tab" onclick="filterMenu('breakfast')">🍳 Breakfast</div>
+            <div class="category-tab" onclick="filterMenu('lunch')">🍔 Lunch</div>
+            <div class="category-tab" onclick="filterMenu('sandwiches')">🥪 Sandwiches</div>
+            <div class="category-tab" onclick="filterMenu('sides')">🍟 Sides</div>
+            <div class="category-tab" onclick="filterMenu('drinks')">🥤 Drinks</div>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>The Place to Eat</span> | 48 Road Boston, MA, USA | 📞 01233322211</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - The Place to Eat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">The Place to Eat</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+    </nav>
+
+    <section>
+        <h2>Checkout</h2>
+
+        <div class="checkout-form">
+
+            <!-- Warning Box -->
+            <div class="warning-box">
+                ⚠️ <strong>Important Notice:</strong> All orders are final and cannot be cancelled once placed. Please review your order carefully before confirming.
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary" id="order-summary">
+                <h3>📋 Order Summary</h3>
+                <div id="order-items"></div>
+                <div style="border-top: 2px solid #D4A017; margin-top: 10px; padding-top: 10px;">
+                    <div class="order-summary-item">
+                        <span>Subtotal:</span>
+                        <span id="checkout-subtotal">$0.00</span>
+                    </div>
+                    <div class="order-summary-item">
+                        <span>Delivery Fee:</span>
+                        <span>$5.00</span>
+                    </div>
+                    <div class="order-summary-item" style="font-weight:bold; font-size:18px; color:#8B2500;">
+                        <span>Total:</span>
+                        <span id="checkout-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Info -->
+            <h3>👤 Your Information</h3>
+            <input type="text" id="customer-name" placeholder="Full Name" required>
+            <input type="tel" id="customer-phone" placeholder="Phone Number" required>
+            <input type="email" id="customer-email" placeholder="Email Address" required>
+
+            <!-- Delivery Info -->
+            <h3 style="margin-top:25px;">📍 Delivery Address</h3>
+            <input type="text" id="delivery-address" placeholder="Street Address" required>
+            <input type="text" id="delivery-city" placeholder="City" required>
+            <input type="text" id="delivery-zip" placeholder="ZIP Code" required>
+            <textarea id="delivery-notes" placeholder="Delivery Notes (landmarks, apartment number, gate code, etc.)"></textarea>
+
+            <!-- Order Notes -->
+            <h3 style="margin-top:25px;">📝 Order Notes</h3>
+            <textarea id="order-notes" placeholder="Special requests, allergies, or any notes about your food order..."></textarea>
+
+            <!-- Payment Method -->
+            <h3 style="margin-top:25px;">💳 Payment Method</h3>
+            <div class="payment-options">
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="cash" checked>
+                    💵 Cash on Delivery
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="paypal">
+                    🅿️ PayPal
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="bank">
+                    🏦 Bank Transfer
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="zelle">
+                    ⚡ Zelle
+                </label>
+            </div>
+
+            <!-- PayPal Info -->
+            <div id="paypal-info" style="display:none; background-color:#E3F2FD; padding:15px; border-radius:8px; margin-top:10px;">
+                <p>Send payment to: <strong>paypal.me/ThePlaceToEat</strong></p>
+                <p style="font-size:13px; margin-top:5px;">Please send the exact amount and include your order number in the note.</p>
+            </div>
+
+            <!-- Bank Transfer Info -->
+            <div id="bank-info" style="display:none; background-color:#E8F5E9; padding:15px; border-radius:8px; margin-top:10px;">
+                <p><strong>Bank:</strong> Bank of America</p>
+                <p><strong>Account Name:</strong> The Place to Eat</p>
+                <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>
+                <p><strong>Routing Number:</strong> XXXXXXXXX</p>
+            </div>
+
+            <!-- Zelle Info -->
+            <div id="zelle-info" style="display:none; background-color:#F3E5F5; padding:15px; border-radius:8px; margin-top:10px;">
+                <p>Send payment via Zelle to: <strong>01233322211</strong></p>
+                <p style="font-size:13px; margin-top:5px;">Please include your name in the Zelle note.</p>
+            </div>
+
+            <button class="place-order-btn" onclick="placeOrder()">
+                ✅ Place Order
+            </button>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>The Place to Eat</span> | 48 Road Boston, MA, USA | 📞 01233322211</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
